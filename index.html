@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@300&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <!-- Tailwind invocation -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+    <title>Weather Comparison</title>
+</head>
+
+<!-- Body -->
+<body class="min-h-screen font-['Space_Grotesk']">
+    <!-- header -->
+    <header>
+        <div class="font-['MuseoModerno'] my-4 p-4 text-4xl text-center bg-slate-500/50 shadow-md" id="header">
+            <h1>Weather Comparison</h1>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <section>
+            <!-- container for weather and photo-->
+            <div class="container lg:columns-2 mx-auto" id="container">
+              <!-- container for weather and photo location 1 -->
+              <div class="md:p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="NorthContainer">
+                <h2 class="mb-4 text-2xl font-bold">Location 1</h2>          
+                <label class="sr-only" for="cityInput">City:</label>
+               
+                <input class="italic object-center px-8 rounded-md border-solid border-slate-500 border-2 font-mono md:inline" type="text" id="city-search-north" placeholder="Type your City here!" name="north" value="Fredericton"/>
+                <button class="object-center text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="northBtn">Search</button>
+                
+                <!-- Weather info here -->
+                <div class="md:mx-auto m-2" id="NorthCard">
+                  <p>Weather Info</p>
+                </div>
+                <!-- Photo info here -->
+                <div class="md:mx-auto m-2" id="NorthCardPhoto">
+                                
+                </div>
+
+              </div>          
+                        
+              <!-- container for weather and photo location 2 -->
+              <div class="md:p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="SouthContainer">
+                <h2 class="mb-4 text-2xl font-bold">Location 2</h2>
+                <label class="sr-only" for="city-search-south">City:</label>
+                <input class="italic px-8 rounded-md border-solid border-slate-500 border-2 font-mono md:inline" type="search" id="city-search-south" placeholder="Type your City here!" name="south" value="Melbourne"/>
+                <button class="object-center text-white font-bold px-4 rounded-md border-solid border-slate-500 border-2 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" id="southBtn" type="submit">Search</button>
+                <!-- Weather info here -->
+                <div class="md:mx-auto m-2" id="SouthCard">
+                  <p>Weather Info</p>
+                  </div>
+                  <!--Photo Info here  -->
+                <div class="md:mx-auto m-2" id="SouthCardPhoto">
+                                
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="font-bold my-4 p-4 bg-slate-500/50 rounded-md text-center shadow-md" id="footer">
+            <h3>Copyright 2023 Group 1</h3>
+        </div>
+    </footer>
+
+    <!-- jQuery and dayjs api's -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <!-- Javascript file -->
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
